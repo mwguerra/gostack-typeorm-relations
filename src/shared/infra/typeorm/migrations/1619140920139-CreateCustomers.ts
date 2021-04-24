@@ -4,7 +4,7 @@ export default class CreateCustomers1619140920139
   implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     // Resolve o problema se aparecer que a função uuid_generate_v4() não existe ao rodar a migration.
-    await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`);
+    // await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`);
 
     await queryRunner.createTable(
       new Table({
